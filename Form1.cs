@@ -437,12 +437,6 @@ namespace SRC_1
                 //염수농도
                 brine_level.Text = Convert.ToString(brine) + "%";
 
-                if (prame_end_code == 0x0042)
-                {
-                    timer1.Stop();
-                    StartSRC_button.Enabled = true;
-                    EndSRC_button.Enabled = false;
-                }
                 //절기 에러
                 if (seasonErr == 10)
                 {
