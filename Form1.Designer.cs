@@ -75,9 +75,6 @@ namespace SRC_1
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.b_tank_button = new System.Windows.Forms.Button();
             this.t_b_progressBar = new System.Windows.Forms.ProgressBar();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.pump_b_label = new System.Windows.Forms.Label();
-            this.pump_a_label = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.jet_label = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -179,7 +176,12 @@ namespace SRC_1
             this.n1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.single_end_button = new System.Windows.Forms.Button();
             this.single_start_button = new System.Windows.Forms.Button();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.pump_b_label = new System.Windows.Forms.Label();
+            this.pump_a_label = new System.Windows.Forms.Label();
+            this.wet_status = new System.Windows.Forms.Label();
             this.tableLayoutPanel58 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel56 = new System.Windows.Forms.TableLayoutPanel();
@@ -201,8 +203,8 @@ namespace SRC_1
             this.water_cycle_start_button = new System.Windows.Forms.Button();
             this.water_cycle_end_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel61 = new System.Windows.Forms.TableLayoutPanel();
+            this.group_end_button = new System.Windows.Forms.Button();
             this.group_start_button = new System.Windows.Forms.Button();
-            this.mod_dropBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel62 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel57 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
@@ -211,21 +213,27 @@ namespace SRC_1
             this.alarm3 = new System.Windows.Forms.Label();
             this.alarm4 = new System.Windows.Forms.Label();
             this.alarm2 = new System.Windows.Forms.Label();
+            this.sensor_use_button = new System.Windows.Forms.Button();
+            this.sensor_use_start_button = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.starting_num_textbox = new System.Windows.Forms.TextBox();
+            this.runningtime_textbox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.port_textbox = new System.Windows.Forms.TextBox();
+            this.speed_dropbox = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel63 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.IP4 = new System.Windows.Forms.TextBox();
+            this.IP2 = new System.Windows.Forms.TextBox();
+            this.IP1 = new System.Windows.Forms.TextBox();
+            this.IP3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.season_dropbox = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.setting_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
@@ -244,10 +252,6 @@ namespace SRC_1
             this.tableLayoutPanel97 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel99 = new System.Windows.Forms.TableLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.setting_button = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.t_b_label.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -259,7 +263,6 @@ namespace SRC_1
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
@@ -295,6 +298,7 @@ namespace SRC_1
             this.tableLayoutPanel26.SuspendLayout();
             this.tableLayoutPanel24.SuspendLayout();
             this.tableLayoutPanel22.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel58.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel56.SuspendLayout();
@@ -306,8 +310,8 @@ namespace SRC_1
             this.tableLayoutPanel57.SuspendLayout();
             this.tableLayoutPanel64.SuspendLayout();
             this.tableLayoutPanel63.SuspendLayout();
-            this.tableLayoutPanel88.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel88.SuspendLayout();
             this.SuspendLayout();
             // 
             // t_b_label
@@ -367,9 +371,9 @@ namespace SRC_1
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.08861F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.91139F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.10256F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.89743F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(316, 107);
             this.tableLayoutPanel3.TabIndex = 0;
@@ -380,13 +384,13 @@ namespace SRC_1
             this.emergency_end_button.BackColor = System.Drawing.Color.Orange;
             this.emergency_end_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.emergency_end_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.emergency_end_button.Location = new System.Drawing.Point(239, 82);
-            this.emergency_end_button.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.emergency_end_button.Location = new System.Drawing.Point(239, 81);
             this.emergency_end_button.Name = "emergency_end_button";
-            this.emergency_end_button.Size = new System.Drawing.Size(66, 22);
+            this.emergency_end_button.Size = new System.Drawing.Size(66, 23);
             this.emergency_end_button.TabIndex = 24;
             this.emergency_end_button.Text = "긴급종료";
             this.emergency_end_button.UseVisualStyleBackColor = false;
+            this.emergency_end_button.Click += new System.EventHandler(this.emergency_end_button_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -401,7 +405,7 @@ namespace SRC_1
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(86, 51);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(86, 46);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // version_label
@@ -412,7 +416,7 @@ namespace SRC_1
             this.version_label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.version_label.Location = new System.Drawing.Point(3, 0);
             this.version_label.Name = "version_label";
-            this.version_label.Size = new System.Drawing.Size(80, 20);
+            this.version_label.Size = new System.Drawing.Size(80, 18);
             this.version_label.TabIndex = 0;
             this.version_label.Text = "Version [-]";
             this.version_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -421,10 +425,10 @@ namespace SRC_1
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(3, 25);
+            this.label14.Location = new System.Drawing.Point(3, 23);
             this.label14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 26);
+            this.label14.Size = new System.Drawing.Size(80, 23);
             this.label14.TabIndex = 1;
             this.label14.Text = "운용상태";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -435,13 +439,13 @@ namespace SRC_1
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel21.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 57);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 52);
             this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 2;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(86, 23);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(86, 24);
             this.tableLayoutPanel21.TabIndex = 5;
             // 
             // label15
@@ -451,7 +455,7 @@ namespace SRC_1
             this.label15.Location = new System.Drawing.Point(3, 5);
             this.label15.Margin = new System.Windows.Forms.Padding(3, 5, 3, 1);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 15);
+            this.label15.Size = new System.Drawing.Size(80, 16);
             this.label15.TabIndex = 2;
             this.label15.Text = "PLC";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -462,8 +466,8 @@ namespace SRC_1
             this.StartSRC_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.StartSRC_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StartSRC_button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StartSRC_button.Location = new System.Drawing.Point(239, 30);
-            this.StartSRC_button.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.StartSRC_button.Location = new System.Drawing.Point(239, 25);
+            this.StartSRC_button.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.StartSRC_button.Name = "StartSRC_button";
             this.StartSRC_button.Size = new System.Drawing.Size(66, 22);
             this.StartSRC_button.TabIndex = 0;
@@ -477,10 +481,10 @@ namespace SRC_1
             this.soalt_jet_window.BackColor = System.Drawing.SystemColors.Control;
             this.soalt_jet_window.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.soalt_jet_window.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.soalt_jet_window.Location = new System.Drawing.Point(93, 83);
+            this.soalt_jet_window.Location = new System.Drawing.Point(93, 79);
             this.soalt_jet_window.Margin = new System.Windows.Forms.Padding(1);
             this.soalt_jet_window.Name = "soalt_jet_window";
-            this.soalt_jet_window.Size = new System.Drawing.Size(142, 23);
+            this.soalt_jet_window.Size = new System.Drawing.Size(142, 27);
             this.soalt_jet_window.TabIndex = 7;
             this.soalt_jet_window.Text = "-";
             this.soalt_jet_window.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,9 +493,9 @@ namespace SRC_1
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 82);
+            this.label2.Location = new System.Drawing.Point(3, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 25);
+            this.label2.Size = new System.Drawing.Size(86, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "살포동작";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -501,9 +505,9 @@ namespace SRC_1
             this.EndSRC_button.BackColor = System.Drawing.SystemColors.Control;
             this.EndSRC_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.EndSRC_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EndSRC_button.Location = new System.Drawing.Point(239, 58);
+            this.EndSRC_button.Location = new System.Drawing.Point(239, 53);
             this.EndSRC_button.Name = "EndSRC_button";
-            this.EndSRC_button.Size = new System.Drawing.Size(66, 21);
+            this.EndSRC_button.Size = new System.Drawing.Size(66, 22);
             this.EndSRC_button.TabIndex = 6;
             this.EndSRC_button.Text = "종료";
             this.EndSRC_button.UseVisualStyleBackColor = false;
@@ -515,11 +519,11 @@ namespace SRC_1
             this.plc_window.BackColor = System.Drawing.SystemColors.Control;
             this.plc_window.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.plc_window.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plc_window.Location = new System.Drawing.Point(93, 56);
+            this.plc_window.Location = new System.Drawing.Point(93, 51);
             this.plc_window.Margin = new System.Windows.Forms.Padding(1);
             this.plc_window.Name = "plc_window";
             this.plc_window.Padding = new System.Windows.Forms.Padding(1);
-            this.plc_window.Size = new System.Drawing.Size(142, 25);
+            this.plc_window.Size = new System.Drawing.Size(142, 26);
             this.plc_window.TabIndex = 0;
             this.plc_window.Text = "-";
             this.plc_window.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -532,8 +536,8 @@ namespace SRC_1
             this.status_window.AutoSize = true;
             this.status_window.BackColor = System.Drawing.SystemColors.Control;
             this.status_window.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.status_window.Location = new System.Drawing.Point(93, 30);
-            this.status_window.Margin = new System.Windows.Forms.Padding(1, 30, 1, 1);
+            this.status_window.Location = new System.Drawing.Point(93, 25);
+            this.status_window.Margin = new System.Windows.Forms.Padding(1, 25, 1, 1);
             this.status_window.Name = "status_window";
             this.status_window.Padding = new System.Windows.Forms.Padding(1);
             this.status_window.Size = new System.Drawing.Size(142, 24);
@@ -727,7 +731,6 @@ namespace SRC_1
             this.season.TabIndex = 21;
             this.season.Text = "00";
             this.season.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.season.Click += new System.EventHandler(this.season_Click);
             // 
             // weather
             // 
@@ -824,9 +827,9 @@ namespace SRC_1
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.90148F));
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel14, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel13, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel12, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel1, 3, 0);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel7, 4, 0);
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel12, 2, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(18, 133);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -834,7 +837,6 @@ namespace SRC_1
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(1015, 164);
             this.tableLayoutPanel10.TabIndex = 1;
-            this.tableLayoutPanel10.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel10_Paint);
             // 
             // tableLayoutPanel14
             // 
@@ -843,9 +845,8 @@ namespace SRC_1
             this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel14.Controls.Add(this.tank_a_label, 0, 2);
             this.tableLayoutPanel14.Controls.Add(this.t_a_progressBar, 0, 1);
-            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel14.Location = new System.Drawing.Point(4, 6);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 12);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 3;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -881,6 +882,7 @@ namespace SRC_1
             this.a_tank_button.TabIndex = 1;
             this.a_tank_button.Text = "A탱크";
             this.a_tank_button.UseVisualStyleBackColor = false;
+            this.a_tank_button.Click += new System.EventHandler(this.a_tank_button_Click);
             // 
             // tank_a_label
             // 
@@ -910,9 +912,8 @@ namespace SRC_1
             this.tableLayoutPanel13.Controls.Add(this.tank_b_label, 0, 2);
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel19, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.t_b_progressBar, 0, 1);
-            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(81, 6);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(3, 5, 3, 12);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 3;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -960,6 +961,7 @@ namespace SRC_1
             this.b_tank_button.TabIndex = 1;
             this.b_tank_button.Text = "B탱크";
             this.b_tank_button.UseVisualStyleBackColor = false;
+            this.b_tank_button.Click += new System.EventHandler(this.b_tank_button_Click);
             // 
             // t_b_progressBar
             // 
@@ -969,52 +971,6 @@ namespace SRC_1
             this.t_b_progressBar.Name = "t_b_progressBar";
             this.t_b_progressBar.Size = new System.Drawing.Size(58, 73);
             this.t_b_progressBar.TabIndex = 2;
-            // 
-            // tableLayoutPanel12
-            // 
-            this.tableLayoutPanel12.ColumnCount = 1;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Controls.Add(this.pump_b_label, 0, 1);
-            this.tableLayoutPanel12.Controls.Add(this.pump_a_label, 0, 0);
-            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(161, 11);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(3, 10, 3, 12);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            this.tableLayoutPanel12.RowCount = 2;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.76303F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.23697F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(81, 140);
-            this.tableLayoutPanel12.TabIndex = 1;
-            // 
-            // pump_b_label
-            // 
-            this.pump_b_label.AutoSize = true;
-            this.pump_b_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tableLayoutPanel12.SetColumnSpan(this.pump_b_label, 2);
-            this.pump_b_label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pump_b_label.Location = new System.Drawing.Point(5, 73);
-            this.pump_b_label.Margin = new System.Windows.Forms.Padding(5, 4, 5, 15);
-            this.pump_b_label.Name = "pump_b_label";
-            this.pump_b_label.Size = new System.Drawing.Size(71, 52);
-            this.pump_b_label.TabIndex = 1;
-            this.pump_b_label.Text = "B 펌프";
-            this.pump_b_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pump_a_label
-            // 
-            this.pump_a_label.AutoSize = true;
-            this.pump_a_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tableLayoutPanel12.SetColumnSpan(this.pump_a_label, 2);
-            this.pump_a_label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pump_a_label.Location = new System.Drawing.Point(5, 15);
-            this.pump_a_label.Margin = new System.Windows.Forms.Padding(5, 15, 5, 4);
-            this.pump_a_label.Name = "pump_a_label";
-            this.pump_a_label.Size = new System.Drawing.Size(71, 50);
-            this.pump_a_label.TabIndex = 0;
-            this.pump_a_label.Text = "A 펌프";
-            this.pump_a_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
@@ -1049,11 +1005,12 @@ namespace SRC_1
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.04726F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.95273F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.22895F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.77105F));
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel11, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.single_start_button, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.single_end_button, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.single_start_button, 0, 2);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(330, 4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
@@ -2662,17 +2619,91 @@ namespace SRC_1
             this.label3.Text = " 노즐 상태";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // single_end_button
+            // 
+            this.single_end_button.BackColor = System.Drawing.SystemColors.Control;
+            this.single_end_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.single_end_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.single_end_button.Location = new System.Drawing.Point(579, 125);
+            this.single_end_button.Name = "single_end_button";
+            this.single_end_button.Size = new System.Drawing.Size(95, 28);
+            this.single_end_button.TabIndex = 5;
+            this.single_end_button.Text = "개별운전 종료";
+            this.single_end_button.UseVisualStyleBackColor = false;
+            this.single_end_button.Click += new System.EventHandler(this.single_end_button_Click);
+            // 
             // single_start_button
             // 
+            this.single_start_button.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.single_start_button.BackColor = System.Drawing.SystemColors.Control;
             this.single_start_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.single_start_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.single_start_button.Location = new System.Drawing.Point(571, 125);
+            this.single_start_button.Location = new System.Drawing.Point(471, 125);
             this.single_start_button.Name = "single_start_button";
-            this.single_start_button.Size = new System.Drawing.Size(103, 28);
+            this.single_start_button.Size = new System.Drawing.Size(102, 28);
             this.single_start_button.TabIndex = 4;
             this.single_start_button.Text = "개별운전 시작";
             this.single_start_button.UseVisualStyleBackColor = false;
+            this.single_start_button.Click += new System.EventHandler(this.single_start_button_Click);
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.pump_b_label, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.pump_a_label, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.wet_status, 0, 2);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(161, 33);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(3, 10, 3, 5);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 3;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.76303F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.23697F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(81, 125);
+            this.tableLayoutPanel12.TabIndex = 1;
+            // 
+            // pump_b_label
+            // 
+            this.pump_b_label.AutoSize = true;
+            this.pump_b_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tableLayoutPanel12.SetColumnSpan(this.pump_b_label, 2);
+            this.pump_b_label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pump_b_label.Location = new System.Drawing.Point(5, 54);
+            this.pump_b_label.Margin = new System.Windows.Forms.Padding(5, 4, 5, 10);
+            this.pump_b_label.Name = "pump_b_label";
+            this.pump_b_label.Size = new System.Drawing.Size(71, 37);
+            this.pump_b_label.TabIndex = 1;
+            this.pump_b_label.Text = "B 펌프";
+            this.pump_b_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pump_a_label
+            // 
+            this.pump_a_label.AutoSize = true;
+            this.pump_a_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tableLayoutPanel12.SetColumnSpan(this.pump_a_label, 2);
+            this.pump_a_label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pump_a_label.Location = new System.Drawing.Point(5, 10);
+            this.pump_a_label.Margin = new System.Windows.Forms.Padding(5, 10, 5, 4);
+            this.pump_a_label.Name = "pump_a_label";
+            this.pump_a_label.Size = new System.Drawing.Size(71, 36);
+            this.pump_a_label.TabIndex = 0;
+            this.pump_a_label.Text = "A 펌프";
+            this.pump_a_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wet_status
+            // 
+            this.wet_status.AutoSize = true;
+            this.wet_status.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wet_status.Location = new System.Drawing.Point(3, 101);
+            this.wet_status.Name = "wet_status";
+            this.wet_status.Size = new System.Drawing.Size(75, 24);
+            this.wet_status.TabIndex = 2;
+            this.wet_status.Text = "-";
+            this.wet_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel58
             // 
@@ -2784,7 +2815,6 @@ namespace SRC_1
             this.label25.TabIndex = 2;
             this.label25.Text = "살포모드";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // tableLayoutPanel8
             // 
@@ -2906,6 +2936,7 @@ namespace SRC_1
             this.heatting_end_button.TabIndex = 1;
             this.heatting_end_button.Text = "가온 종료";
             this.heatting_end_button.UseVisualStyleBackColor = false;
+            this.heatting_end_button.Click += new System.EventHandler(this.heatting_end_button_Click);
             // 
             // remove_d_start_button
             // 
@@ -2920,6 +2951,7 @@ namespace SRC_1
             this.remove_d_start_button.TabIndex = 2;
             this.remove_d_start_button.Text = "제거 시작";
             this.remove_d_start_button.UseVisualStyleBackColor = false;
+            this.remove_d_start_button.Click += new System.EventHandler(this.remove_d_start_button_Click);
             // 
             // remove_d_end_button
             // 
@@ -2934,6 +2966,7 @@ namespace SRC_1
             this.remove_d_end_button.TabIndex = 3;
             this.remove_d_end_button.Text = "제거 종료";
             this.remove_d_end_button.UseVisualStyleBackColor = false;
+            this.remove_d_end_button.Click += new System.EventHandler(this.remove_d_end_button_Click);
             // 
             // tableLayoutPanel60
             // 
@@ -2983,17 +3016,33 @@ namespace SRC_1
             // tableLayoutPanel61
             // 
             this.tableLayoutPanel61.ColumnCount = 1;
-            this.tableLayoutPanel61.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel61.Controls.Add(this.group_start_button, 0, 1);
-            this.tableLayoutPanel61.Controls.Add(this.mod_dropBox, 0, 0);
+            this.tableLayoutPanel61.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel61.Controls.Add(this.group_end_button, 0, 1);
+            this.tableLayoutPanel61.Controls.Add(this.group_start_button, 0, 0);
             this.tableLayoutPanel61.Location = new System.Drawing.Point(131, 3);
             this.tableLayoutPanel61.Name = "tableLayoutPanel61";
             this.tableLayoutPanel61.RowCount = 2;
             this.tableLayoutPanel60.SetRowSpan(this.tableLayoutPanel61, 2);
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.65957F));
-            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.34042F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel61.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel61.Size = new System.Drawing.Size(133, 94);
             this.tableLayoutPanel61.TabIndex = 2;
+            // 
+            // group_end_button
+            // 
+            this.group_end_button.BackColor = System.Drawing.SystemColors.Control;
+            this.group_end_button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.group_end_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.group_end_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.group_end_button.Location = new System.Drawing.Point(10, 50);
+            this.group_end_button.Margin = new System.Windows.Forms.Padding(10, 3, 10, 1);
+            this.group_end_button.Name = "group_end_button";
+            this.group_end_button.Size = new System.Drawing.Size(113, 43);
+            this.group_end_button.TabIndex = 8;
+            this.group_end_button.Text = "그룹운전 종료";
+            this.group_end_button.UseVisualStyleBackColor = false;
+            this.group_end_button.Click += new System.EventHandler(this.group_end_button_Click);
             // 
             // group_start_button
             // 
@@ -3001,26 +3050,14 @@ namespace SRC_1
             this.group_start_button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.group_start_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.group_start_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.group_start_button.Location = new System.Drawing.Point(10, 29);
+            this.group_start_button.Location = new System.Drawing.Point(10, 3);
             this.group_start_button.Margin = new System.Windows.Forms.Padding(10, 3, 10, 1);
             this.group_start_button.Name = "group_start_button";
-            this.group_start_button.Size = new System.Drawing.Size(113, 64);
+            this.group_start_button.Size = new System.Drawing.Size(113, 43);
             this.group_start_button.TabIndex = 7;
             this.group_start_button.Text = "그룹운전 시작";
             this.group_start_button.UseVisualStyleBackColor = false;
-            // 
-            // mod_dropBox
-            // 
-            this.mod_dropBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mod_dropBox.FormattingEnabled = true;
-            this.mod_dropBox.Items.AddRange(new object[] {
-            "그룹운전",
-            "개별운전"});
-            this.mod_dropBox.Location = new System.Drawing.Point(10, 3);
-            this.mod_dropBox.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.mod_dropBox.Name = "mod_dropBox";
-            this.mod_dropBox.Size = new System.Drawing.Size(113, 20);
-            this.mod_dropBox.TabIndex = 6;
+            this.group_start_button.Click += new System.EventHandler(this.group_start_button_Click);
             // 
             // tableLayoutPanel62
             // 
@@ -3031,12 +3068,12 @@ namespace SRC_1
             this.tableLayoutPanel62.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
             this.tableLayoutPanel62.Controls.Add(this.tableLayoutPanel57, 0, 0);
             this.tableLayoutPanel62.Controls.Add(this.label17, 0, 4);
-            this.tableLayoutPanel62.Controls.Add(this.textBox7, 1, 4);
-            this.tableLayoutPanel62.Controls.Add(this.textBox6, 3, 3);
+            this.tableLayoutPanel62.Controls.Add(this.starting_num_textbox, 1, 4);
+            this.tableLayoutPanel62.Controls.Add(this.runningtime_textbox, 3, 3);
             this.tableLayoutPanel62.Controls.Add(this.label21, 2, 3);
             this.tableLayoutPanel62.Controls.Add(this.label18, 2, 2);
-            this.tableLayoutPanel62.Controls.Add(this.textBox5, 3, 2);
-            this.tableLayoutPanel62.Controls.Add(this.comboBox1, 1, 3);
+            this.tableLayoutPanel62.Controls.Add(this.port_textbox, 3, 2);
+            this.tableLayoutPanel62.Controls.Add(this.speed_dropbox, 1, 3);
             this.tableLayoutPanel62.Controls.Add(this.label13, 0, 3);
             this.tableLayoutPanel62.Controls.Add(this.label12, 0, 2);
             this.tableLayoutPanel62.Controls.Add(this.tableLayoutPanel63, 1, 2);
@@ -3058,20 +3095,24 @@ namespace SRC_1
             // 
             // tableLayoutPanel57
             // 
-            this.tableLayoutPanel57.ColumnCount = 1;
+            this.tableLayoutPanel57.ColumnCount = 2;
             this.tableLayoutPanel62.SetColumnSpan(this.tableLayoutPanel57, 4);
-            this.tableLayoutPanel57.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel57.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel57.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
             this.tableLayoutPanel57.Controls.Add(this.label26, 0, 0);
             this.tableLayoutPanel57.Controls.Add(this.tableLayoutPanel64, 0, 1);
+            this.tableLayoutPanel57.Controls.Add(this.sensor_use_button, 1, 1);
+            this.tableLayoutPanel57.Controls.Add(this.sensor_use_start_button, 1, 2);
             this.tableLayoutPanel57.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel57.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel57.Name = "tableLayoutPanel57";
-            this.tableLayoutPanel57.RowCount = 2;
-            this.tableLayoutPanel57.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.71428F));
-            this.tableLayoutPanel57.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.28571F));
-            this.tableLayoutPanel57.Size = new System.Drawing.Size(511, 90);
+            this.tableLayoutPanel57.RowCount = 3;
+            this.tableLayoutPanel57.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel57.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel57.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel57.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel57.Size = new System.Drawing.Size(511, 94);
             this.tableLayoutPanel57.TabIndex = 23;
-            this.tableLayoutPanel57.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel57_Paint);
             // 
             // label26
             // 
@@ -3079,9 +3120,9 @@ namespace SRC_1
             this.label26.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label26.Location = new System.Drawing.Point(3, 1);
-            this.label26.Margin = new System.Windows.Forms.Padding(3, 1, 3, 7);
+            this.label26.Margin = new System.Windows.Forms.Padding(3, 1, 3, 3);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(505, 15);
+            this.label26.Size = new System.Drawing.Size(329, 14);
             this.label26.TabIndex = 1;
             this.label26.Text = "살포 목적";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3097,11 +3138,13 @@ namespace SRC_1
             this.tableLayoutPanel64.Controls.Add(this.alarm3, 2, 0);
             this.tableLayoutPanel64.Controls.Add(this.alarm4, 3, 0);
             this.tableLayoutPanel64.Controls.Add(this.alarm2, 1, 0);
-            this.tableLayoutPanel64.Location = new System.Drawing.Point(3, 26);
+            this.tableLayoutPanel64.Location = new System.Drawing.Point(0, 18);
+            this.tableLayoutPanel64.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel64.Name = "tableLayoutPanel64";
             this.tableLayoutPanel64.RowCount = 1;
+            this.tableLayoutPanel57.SetRowSpan(this.tableLayoutPanel64, 2);
             this.tableLayoutPanel64.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel64.Size = new System.Drawing.Size(505, 61);
+            this.tableLayoutPanel64.Size = new System.Drawing.Size(335, 73);
             this.tableLayoutPanel64.TabIndex = 24;
             // 
             // alarm1
@@ -3113,7 +3156,7 @@ namespace SRC_1
             this.alarm1.Location = new System.Drawing.Point(3, 3);
             this.alarm1.Margin = new System.Windows.Forms.Padding(3);
             this.alarm1.Name = "alarm1";
-            this.alarm1.Size = new System.Drawing.Size(120, 55);
+            this.alarm1.Size = new System.Drawing.Size(77, 67);
             this.alarm1.TabIndex = 1;
             this.alarm1.Text = "강우/강설";
             this.alarm1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3124,10 +3167,10 @@ namespace SRC_1
             this.alarm3.BackColor = System.Drawing.Color.LightGray;
             this.alarm3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.alarm3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.alarm3.Location = new System.Drawing.Point(255, 3);
+            this.alarm3.Location = new System.Drawing.Point(169, 3);
             this.alarm3.Margin = new System.Windows.Forms.Padding(3);
             this.alarm3.Name = "alarm3";
-            this.alarm3.Size = new System.Drawing.Size(120, 55);
+            this.alarm3.Size = new System.Drawing.Size(77, 67);
             this.alarm3.TabIndex = 3;
             this.alarm3.Text = "제설용액\r\n노면농도";
             this.alarm3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3138,10 +3181,10 @@ namespace SRC_1
             this.alarm4.BackColor = System.Drawing.Color.LightGray;
             this.alarm4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.alarm4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.alarm4.Location = new System.Drawing.Point(381, 3);
+            this.alarm4.Location = new System.Drawing.Point(252, 3);
             this.alarm4.Margin = new System.Windows.Forms.Padding(3);
             this.alarm4.Name = "alarm4";
-            this.alarm4.Size = new System.Drawing.Size(121, 55);
+            this.alarm4.Size = new System.Drawing.Size(80, 67);
             this.alarm4.TabIndex = 4;
             this.alarm4.Text = "미세먼지\r\n농도";
             this.alarm4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3152,13 +3195,42 @@ namespace SRC_1
             this.alarm2.BackColor = System.Drawing.Color.LightGray;
             this.alarm2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.alarm2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.alarm2.Location = new System.Drawing.Point(129, 3);
+            this.alarm2.Location = new System.Drawing.Point(86, 3);
             this.alarm2.Margin = new System.Windows.Forms.Padding(3);
             this.alarm2.Name = "alarm2";
-            this.alarm2.Size = new System.Drawing.Size(120, 55);
+            this.alarm2.Size = new System.Drawing.Size(77, 67);
             this.alarm2.TabIndex = 2;
             this.alarm2.Text = "열섬";
             this.alarm2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sensor_use_button
+            // 
+            this.sensor_use_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sensor_use_button.BackColor = System.Drawing.SystemColors.Control;
+            this.sensor_use_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.sensor_use_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sensor_use_button.Location = new System.Drawing.Point(335, 18);
+            this.sensor_use_button.Margin = new System.Windows.Forms.Padding(0);
+            this.sensor_use_button.Name = "sensor_use_button";
+            this.sensor_use_button.Size = new System.Drawing.Size(176, 22);
+            this.sensor_use_button.TabIndex = 26;
+            this.sensor_use_button.Text = "센서분사운전모드 ";
+            this.sensor_use_button.UseVisualStyleBackColor = false;
+            // 
+            // sensor_use_start_button
+            // 
+            this.sensor_use_start_button.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.sensor_use_start_button.BackColor = System.Drawing.SystemColors.Control;
+            this.sensor_use_start_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.sensor_use_start_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sensor_use_start_button.Location = new System.Drawing.Point(335, 40);
+            this.sensor_use_start_button.Margin = new System.Windows.Forms.Padding(0);
+            this.sensor_use_start_button.Name = "sensor_use_start_button";
+            this.sensor_use_start_button.Size = new System.Drawing.Size(176, 48);
+            this.sensor_use_start_button.TabIndex = 27;
+            this.sensor_use_start_button.Text = "시작 ";
+            this.sensor_use_start_button.UseVisualStyleBackColor = false;
+            this.sensor_use_start_button.Click += new System.EventHandler(this.sensor_use_start_button_Click);
             // 
             // label17
             // 
@@ -3171,21 +3243,20 @@ namespace SRC_1
             this.label17.TabIndex = 14;
             this.label17.Text = "동작횟수 : ";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
-            // textBox7
+            // starting_num_textbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(72, 164);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(205, 21);
-            this.textBox7.TabIndex = 20;
+            this.starting_num_textbox.Location = new System.Drawing.Point(72, 164);
+            this.starting_num_textbox.Name = "starting_num_textbox";
+            this.starting_num_textbox.Size = new System.Drawing.Size(205, 21);
+            this.starting_num_textbox.TabIndex = 20;
             // 
-            // textBox6
+            // runningtime_textbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(357, 140);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(151, 21);
-            this.textBox6.TabIndex = 19;
+            this.runningtime_textbox.Location = new System.Drawing.Point(357, 140);
+            this.runningtime_textbox.Name = "runningtime_textbox";
+            this.runningtime_textbox.Size = new System.Drawing.Size(151, 21);
+            this.runningtime_textbox.TabIndex = 19;
             // 
             // label21
             // 
@@ -3211,20 +3282,27 @@ namespace SRC_1
             this.label18.Text = "PORT : ";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
+            // port_textbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(357, 114);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 21);
-            this.textBox5.TabIndex = 18;
+            this.port_textbox.Location = new System.Drawing.Point(357, 114);
+            this.port_textbox.Name = "port_textbox";
+            this.port_textbox.Size = new System.Drawing.Size(151, 21);
+            this.port_textbox.TabIndex = 18;
             // 
-            // comboBox1
+            // speed_dropbox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(72, 140);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(205, 20);
-            this.comboBox1.TabIndex = 21;
+            this.speed_dropbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.speed_dropbox.FormattingEnabled = true;
+            this.speed_dropbox.Items.AddRange(new object[] {
+            "4800",
+            "9600",
+            "19200",
+            "38400",
+            "115200"});
+            this.speed_dropbox.Location = new System.Drawing.Point(72, 140);
+            this.speed_dropbox.Name = "speed_dropbox";
+            this.speed_dropbox.Size = new System.Drawing.Size(205, 20);
+            this.speed_dropbox.TabIndex = 21;
             // 
             // label13
             // 
@@ -3249,7 +3327,6 @@ namespace SRC_1
             this.label12.TabIndex = 12;
             this.label12.Text = "접속IP :";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // tableLayoutPanel63
             // 
@@ -3258,10 +3335,10 @@ namespace SRC_1
             this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel63.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel63.Controls.Add(this.textBox4, 3, 0);
-            this.tableLayoutPanel63.Controls.Add(this.textBox2, 1, 0);
-            this.tableLayoutPanel63.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel63.Controls.Add(this.textBox3, 2, 0);
+            this.tableLayoutPanel63.Controls.Add(this.IP4, 3, 0);
+            this.tableLayoutPanel63.Controls.Add(this.IP2, 1, 0);
+            this.tableLayoutPanel63.Controls.Add(this.IP1, 0, 0);
+            this.tableLayoutPanel63.Controls.Add(this.IP3, 2, 0);
             this.tableLayoutPanel63.Location = new System.Drawing.Point(69, 111);
             this.tableLayoutPanel63.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel63.Name = "tableLayoutPanel63";
@@ -3270,37 +3347,37 @@ namespace SRC_1
             this.tableLayoutPanel63.Size = new System.Drawing.Size(211, 26);
             this.tableLayoutPanel63.TabIndex = 17;
             // 
-            // textBox4
+            // IP4
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(159, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(49, 21);
-            this.textBox4.TabIndex = 3;
+            this.IP4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IP4.Location = new System.Drawing.Point(159, 3);
+            this.IP4.Name = "IP4";
+            this.IP4.Size = new System.Drawing.Size(49, 21);
+            this.IP4.TabIndex = 3;
             // 
-            // textBox2
+            // IP2
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(55, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(46, 21);
-            this.textBox2.TabIndex = 1;
+            this.IP2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IP2.Location = new System.Drawing.Point(55, 3);
+            this.IP2.Name = "IP2";
+            this.IP2.Size = new System.Drawing.Size(46, 21);
+            this.IP2.TabIndex = 1;
             // 
-            // textBox1
+            // IP1
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(46, 21);
-            this.textBox1.TabIndex = 0;
+            this.IP1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IP1.Location = new System.Drawing.Point(3, 3);
+            this.IP1.Name = "IP1";
+            this.IP1.Size = new System.Drawing.Size(46, 21);
+            this.IP1.TabIndex = 0;
             // 
-            // textBox3
+            // IP3
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(107, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(46, 21);
-            this.textBox3.TabIndex = 2;
+            this.IP3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IP3.Location = new System.Drawing.Point(107, 3);
+            this.IP3.Name = "IP3";
+            this.IP3.Size = new System.Drawing.Size(46, 21);
+            this.IP3.TabIndex = 2;
             // 
             // label1
             // 
@@ -3314,6 +3391,64 @@ namespace SRC_1
             this.label1.TabIndex = 10;
             this.label1.Text = " 설정";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel62.SetColumnSpan(this.tableLayoutPanel6, 2);
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel6.Controls.Add(this.season_dropbox, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label22, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.setting_button, 2, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(283, 164);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(225, 24);
+            this.tableLayoutPanel6.TabIndex = 24;
+            // 
+            // season_dropbox
+            // 
+            this.season_dropbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.season_dropbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.season_dropbox.FormattingEnabled = true;
+            this.season_dropbox.Items.AddRange(new object[] {
+            "하절기",
+            "동절기"});
+            this.season_dropbox.Location = new System.Drawing.Point(74, 3);
+            this.season_dropbox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.season_dropbox.Name = "season_dropbox";
+            this.season_dropbox.Size = new System.Drawing.Size(66, 20);
+            this.season_dropbox.TabIndex = 18;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(27, 6);
+            this.label22.Margin = new System.Windows.Forms.Padding(3);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(41, 12);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "절기 : ";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // setting_button
+            // 
+            this.setting_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.setting_button.BackColor = System.Drawing.SystemColors.Control;
+            this.setting_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.setting_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.setting_button.Location = new System.Drawing.Point(152, 0);
+            this.setting_button.Margin = new System.Windows.Forms.Padding(0);
+            this.setting_button.Name = "setting_button";
+            this.setting_button.Size = new System.Drawing.Size(73, 24);
+            this.setting_button.TabIndex = 12;
+            this.setting_button.Text = "설정";
+            this.setting_button.UseVisualStyleBackColor = false;
+            this.setting_button.Click += new System.EventHandler(this.setting_button_Click);
             // 
             // tableLayoutPanel16
             // 
@@ -3546,62 +3681,6 @@ namespace SRC_1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Run);
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel62.SetColumnSpan(this.tableLayoutPanel6, 2);
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel6.Controls.Add(this.comboBox2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label22, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.setting_button, 2, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(283, 164);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(225, 24);
-            this.tableLayoutPanel6.TabIndex = 24;
-            // 
-            // setting_button
-            // 
-            this.setting_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.setting_button.BackColor = System.Drawing.SystemColors.Control;
-            this.setting_button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.setting_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setting_button.Location = new System.Drawing.Point(152, 0);
-            this.setting_button.Margin = new System.Windows.Forms.Padding(0);
-            this.setting_button.Name = "setting_button";
-            this.setting_button.Size = new System.Drawing.Size(73, 24);
-            this.setting_button.TabIndex = 12;
-            this.setting_button.Text = "설정";
-            this.setting_button.UseVisualStyleBackColor = false;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(27, 6);
-            this.label22.Margin = new System.Windows.Forms.Padding(3);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 12);
-            this.label22.TabIndex = 17;
-            this.label22.Text = "절기 : ";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "하절기",
-            "동절기"});
-            this.comboBox2.Location = new System.Drawing.Point(74, 3);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(56, 20);
-            this.comboBox2.TabIndex = 18;
-            // 
             // SRC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -3629,8 +3708,6 @@ namespace SRC_1
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
             this.tableLayoutPanel19.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -3700,6 +3777,8 @@ namespace SRC_1
             this.tableLayoutPanel24.PerformLayout();
             this.tableLayoutPanel22.ResumeLayout(false);
             this.tableLayoutPanel22.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel58.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel56.ResumeLayout(false);
@@ -3717,10 +3796,10 @@ namespace SRC_1
             this.tableLayoutPanel64.PerformLayout();
             this.tableLayoutPanel63.ResumeLayout(false);
             this.tableLayoutPanel63.PerformLayout();
-            this.tableLayoutPanel88.ResumeLayout(false);
-            this.tableLayoutPanel88.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel88.ResumeLayout(false);
+            this.tableLayoutPanel88.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3912,26 +3991,25 @@ namespace SRC_1
         private System.Windows.Forms.Button water_cycle_end_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel61;
         private System.Windows.Forms.Button group_start_button;
-        private System.Windows.Forms.ComboBox mod_dropBox;
         private System.Windows.Forms.Button a_tank_button;
         private System.Windows.Forms.Button b_tank_button;
         private System.Windows.Forms.Button heatting_start_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel62;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox port_textbox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel63;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox IP4;
+        private System.Windows.Forms.TextBox IP3;
+        private System.Windows.Forms.TextBox IP2;
+        private System.Windows.Forms.TextBox IP1;
+        private System.Windows.Forms.TextBox runningtime_textbox;
+        private System.Windows.Forms.TextBox starting_num_textbox;
+        private System.Windows.Forms.ComboBox speed_dropbox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel57;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel64;
@@ -3941,9 +4019,14 @@ namespace SRC_1
         private System.Windows.Forms.Label alarm2;
         private System.Windows.Forms.Button emergency_end_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox season_dropbox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button setting_button;
+        private System.Windows.Forms.Button group_end_button;
+        private System.Windows.Forms.Button single_end_button;
+        private System.Windows.Forms.Button sensor_use_start_button;
+        private System.Windows.Forms.Button sensor_use_button;
+        private System.Windows.Forms.Label wet_status;
     }
 }
 
